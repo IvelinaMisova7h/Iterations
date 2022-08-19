@@ -1,15 +1,13 @@
+from turtle import *
+import math
+import random
 import turtle
 
-bob = turtle.Turtle()
-bob.color("red")
-bob.pensize(7)
-bob.shape("turtle")
+window_width = 500
+window_height = 500
 
-bob.forward(100)
-bob.left(90)
-bob.penup()
-bob.forward(100)
-bob.right(90)
-bob.pendown()
-bob.color("green")
-bob.forward(100)
+turtles = 8
+
+turtle.screensize(window_width, window_height)
+
+class racer(object):
