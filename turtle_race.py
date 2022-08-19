@@ -1,9 +1,9 @@
 from turtle import *
-from random import randint
+from random import randint    # Generating random values
 
-speed(0)
-penup()
-goto(-140, 140)
+speed(0)                      # Give the speed to the turtle and 0 is the fastest speed.
+penup()                       # Move turtle without leaving tracks
+goto(-140, 140)               # Move turtle to the position
 
 for step in range(15):
     write(step, align='center')
