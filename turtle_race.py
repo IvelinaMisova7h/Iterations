@@ -1,61 +1,70 @@
 from turtle import *
-import math
-import random
 import turtle
+from random import randint
 
-window_width = 500
-window_height = 500
+speed(0)
+penup()
+goto(-140, 140)
 
-turtles = 8
+for step in range(15):
+  write(step, align='center')
+  right(90)
+  for num in range(8):
+    penup()
+    forward(10)
+    pendown()
+    forward(10)
+  penup()
+  backward(160)
+  left(90)
+  forward(20)
 
-turtle.screensize(window_width, window_height)
+tur1 = Turtle()
+tur1.color('green')
+tur1.shape('turtle')
 
+tur1.penup()
+tur1.goto(-160, 100)
+tur1.pendown()
 
-class racer(object):
-    # initialize constructor
-    def __init__(self, color_1, position_1):
-        self.position = position_1
-        self.color = color_1
-        self.tur = turtle.Turtle()
-        self.tur = shape("turtle")
-        self.tur = color_1(color_1)
-        self.tur.penup()
-        self.tur.setpos(position_1)
-        self.tur.setheading(90)
+for turn in range(10):
+  tur1.right(36)
 
-    def move_1(self):
-        rand = random.randrange(1, 20)
-        self.position = (self.position[0], self.position[1] + rand)
-        self.tur.penup()
-        self.tur.forward(rand)
+tur2 = Turtle()
+tur2.color('red')
+tur2.shape('turtle')
 
-    def reset_1(self):
-        self.tur.penup()
-        self.tur.setposition(self.position)
+tur2.penup()
+tur2.goto(-160, 70)
+tur2.pendown()
 
+for turn in range(72):
+  tur2.left(5)
 
-def set_up_file(name, colors):
-    file_1 = open(name, 'w')
-    for color_2 in colors:
-        file_1.write(color_2 + '0 \n')
-    file_1.close()
+tur3 = Turtle()
+tur3.shape('turtle')
+tur3.color('brown')
 
+tur3.penup()
+tur3.goto(-160, 40)
+tur3.pendown()
 
-def start_game_1():
-    t_list = []
-    turtle.clearscreen()
-    turtle.hideturtle()
-    colors = ["yellow", "blue", "green", 'cyan', 'red', 'purple', 'pink', 'brown', 'black']
-    start = -(window_width / 2) + 20
-    for t in range(turtles):
-        new_position_x = start + t * window_width // turtles
-        t_list.append(racer(colors[t], (new_position_x, -230)))
-        t_list[t].tur.showturtle()
+for turn in range(60):
+  tur3.right(6)
 
-    run = True
-    while run:
-        for t in t_list:
-            t.move_1()
+tur4 = Turtle()
+tur4.shape('turtle')
+tur4.color('orange')
 
-        max_color = []
-        max_dis = 0
+tur4.penup()
+tur4.goto(-160, 10)
+tur4.pendown()
+
+for turn in range(30):
+  tur4.left(12)
+
+for turn in range(100):
+  tur1.forward(randint(1,5))
+  tur2.forward(randint(1,5))
+  tur3.forward(randint(1,5))
+  tur4.forward(randint(1,5))
