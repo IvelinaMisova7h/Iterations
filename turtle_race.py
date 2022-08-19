@@ -1,5 +1,4 @@
 from turtle import *
-import turtle
 from random import randint
 
 speed(0)
@@ -7,17 +6,17 @@ penup()
 goto(-140, 140)
 
 for step in range(15):
-  write(step, align='center')
-  right(90)
-  for num in range(8):
+    write(step, align='center')
+    right(90)
+    for num in range(8):
+        penup()
+        forward(10)
+        pendown()
+        forward(10)
     penup()
-    forward(10)
-    pendown()
-    forward(10)
-  penup()
-  backward(160)
-  left(90)
-  forward(20)
+    backward(160)
+    left(90)
+    forward(20)
 
 tur1 = Turtle()
 tur1.color('green')
@@ -28,7 +27,7 @@ tur1.goto(-160, 100)
 tur1.pendown()
 
 for turn in range(10):
-  tur1.right(36)
+    tur1.right(36)
 
 tur2 = Turtle()
 tur2.color('red')
@@ -39,7 +38,7 @@ tur2.goto(-160, 70)
 tur2.pendown()
 
 for turn in range(72):
-  tur2.left(5)
+    tur2.left(5)
 
 tur3 = Turtle()
 tur3.shape('turtle')
@@ -50,7 +49,7 @@ tur3.goto(-160, 40)
 tur3.pendown()
 
 for turn in range(60):
-  tur3.right(6)
+    tur3.right(6)
 
 tur4 = Turtle()
 tur4.shape('turtle')
@@ -61,10 +60,10 @@ tur4.goto(-160, 10)
 tur4.pendown()
 
 for turn in range(30):
-  tur4.left(12)
+    tur4.left(12)
 
 for turn in range(100):
-  tur1.forward(randint(1,5))
-  tur2.forward(randint(1,5))
-  tur3.forward(randint(1,5))
-  tur4.forward(randint(1,5))
+    tur1.forward(randint(1, 5))
+    tur2.forward(randint(1, 5))
+    tur3.forward(randint(1, 5))
+    tur4.forward(randint(1, 5))
